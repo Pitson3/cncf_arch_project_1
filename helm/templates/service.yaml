@@ -1,9 +1,9 @@
-apiVersion: {{ .Chart.apiVersion }} #v1
+apiVersion: v1 #{{ .Chart.apiVersion }} #v1
 kind: Service
 metadata:
   labels:
     app: techtrends
-    tag: {{ .Values.image.tag }}#latest
+    tag: {{ .Values.image.tag }} #latest
   name: {{ .Chart.name }} #techtrends
   namespace: {{ .Values.namespace.name }}
 spec:
