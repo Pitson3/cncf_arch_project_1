@@ -1,0 +1,14 @@
+apiVersion: {{ .Chart.apiVersion }} #v1
+kind: Service
+metadata:
+  labels:
+    app: techtrends
+    tag: {{ .Values.image.tag }}#latest
+  name: {{ .Chart.name }} #techtrends
+  namespace: {{ .Values.namespace.name }}
+spec:
+  ports:
+  - port: {{ .Values.service.port }} #4111
+    protocol: {{ .Values.service.protocol }} #TCP
+    targetPort: {{ .Values.service.targetPort }} #3111
+  type: {{ .Values.service.type }} #ClusterIP
