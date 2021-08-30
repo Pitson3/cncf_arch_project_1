@@ -32,8 +32,8 @@ spec:
             - containerPort: {{ .Values.containerPort }}
         livenessProbe:
           httpGet:
-            path: {{ .Values.livenesssProbe.path }} #/healthz
-            port: {{ .Values.livenesssProbe.port }} #3111
+            path: {{ .Values.livenessProbe.path }} #/healthz
+            port: {{ .Values.livenessProbe.port }} #3111
         readinessProbe:
           httpGet:
             path: {{ .Values.readinessProbe.path }} #/healthz
