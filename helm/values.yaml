@@ -6,7 +6,7 @@ service:
   protocol: TCP
   type: ClusterIP
 image:
-  repository: techtrends 
+  repository: pitson3/techtrends #techtrendes image could not be pulled
   tag: latest
   pullPolicy: IfNotPresent
 replicaCount: 1
