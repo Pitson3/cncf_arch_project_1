@@ -5,7 +5,7 @@ metadata:
     app: techtrends
     tag: {{ .Values.image.tag }} #latest
   namespace: {{ .Values.namespace.name }}
-  name: {{ .Chart.name }} #techtrends
+  name: techtrends
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - image: {{ .Values.image.repository }}: {{ .Values.image.tag }}
-        name: {{ .Chart.name }} #techtrends
+        name: techtrends
         resources:
           requests:
             cpu: {{ .Values.resources.requests.cpu }}

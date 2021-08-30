@@ -4,7 +4,7 @@ metadata:
   labels:
     app: techtrends
     tag: {{ .Values.image.tag }} #latest
-  name: {{ .Chart.name }} #techtrends
+  name: techtrends
   namespace: {{ .Values.namespace.name }}
 spec:
   ports:
