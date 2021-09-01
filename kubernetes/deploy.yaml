@@ -19,7 +19,7 @@ spec:
         tag: latest
     spec:
       containers:
-      - image: techtrends:latest
+      - image: pitson3/techtrends:latest
         name: techtrends
         resources:
           requests:

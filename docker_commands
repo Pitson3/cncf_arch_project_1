@@ -8,17 +8,31 @@ docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
-docker logs -t -f  zealous_hellman
+docker logs -f  silly_shirley
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container
-2021-08-26T13:41:06.435955800Z  * Serving Flask app "app" (lazy loading)
-2021-08-26T13:41:06.436108900Z  * Environment: production
-2021-08-26T13:41:06.436137000Z    WARNING: This is a development server. Do not use it in a production deployment.
-2021-08-26T13:41:06.436172400Z    Use a production WSGI server instead.
-2021-08-26T13:41:06.436245500Z  * Debug mode: on
-2021-08-26T14:16:25.200034900Z  * Serving Flask app "app" (lazy loading)
-2021-08-26T14:16:25.200080400Z  * Environment: production
-2021-08-26T14:16:25.200090600Z    WARNING: This is a development server. Do not use it in a production deployment.
-2021-08-26T14:16:25.200099200Z    Use a production WSGI server instead.
-2021-08-26T14:16:25.200224100Z  * Debug mode: on 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+INFO:werkzeug:  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:  * Restarting with stat
+WARNING:werkzeug:  * Debugger is active!
+INFO:werkzeug:  * Debugger PIN: 200-838-937
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:10:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:10:43] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:10:43] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:root: 09/01/2021 04:10:45, Article "2020 CNCF Annual Report" retrieved
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:10:45] "GET /1 HTTP/1.1" 200 -
+INFO:root: 09/01/2021 04:11:53, About US page is retrieved
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:11:53] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:16:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:16:15] "GET /create HTTP/1.1" 200 -
+INFO:root: 09/01/2021 04:16:32, Article "CNCF" created
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:16:33] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:16:33] "GET / HTTP/1.1" 200 -
+ERROR:app: 09/01/2021 04:31:28, A non-existent article accessed. Error: 404 (not found)
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:31:28] "GET /90 HTTP/1.1" 404 -
+INFO:werkzeug: 172.17.0.1 - - [01/Sep/2021 04:31:28] "GET /favicon.ico HTTP/1.1" 404 -
